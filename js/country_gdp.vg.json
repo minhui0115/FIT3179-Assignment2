@@ -4,7 +4,7 @@
   "width": 800,
   "height": 500,
   "data": {
-    "url": "https://raw.githubusercontent.com/minhui0115/FIT3179-Assignment2/main/ne_110m_admin_0_countries.topojson",
+    "url": "https://raw.githubusercontent.com/minhui0115/FIT3179-Assignment2/main/js/ne_110m_admin_0_countries.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
   "projection": {"type": "equalEarth"},
@@ -39,7 +39,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/minhui0115/FIT3179-Assignment2/main/Country_GDP.csv"
+              "url": "https://raw.githubusercontent.com/minhui0115/FIT3179-Assignment2/main/data/Country_GDP.csv"
             },
             "key": "Country",
             "fields": ["IMF_GDP", "UN_GDP", "Population", "GDP_per_capita"]
