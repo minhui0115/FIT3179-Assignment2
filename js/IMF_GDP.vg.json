@@ -1,0 +1,31 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/minhui0115/FIT3179-Assignment2/main/data/Country_GDP.csv"
+    },
+    "layer": [
+        {
+            "mark": "bar",
+            "encoding": {
+                "x": {
+                    "field": "Continent",
+                    "type": "ordinal"
+                },
+                "y": {
+                    "aggregate": "sum",
+                    "field": "IMF_GDP",
+                    "type": "quantitative",
+                    "title": "Total IMF GDP"
+                },
+                "color": {
+                    "value": "blue"
+                },
+                "tooltip": [
+                    { "field": "Country", "type": "nominal", "title": "Country" },
+                    { "field": "IMF_GDP", "type": "quantitative", "title": "IMF GDP" },
+                    { "field": "UN_GDP", "type": "quantitative", "title": "UN GDP" }
+                ]
+            }
+        }
+    ]
+}
