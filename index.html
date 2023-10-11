@@ -6,6 +6,11 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
   
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+
   <!-- Import pure.css -->
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
     integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
@@ -28,7 +33,7 @@
     <div class="pure-g">
       <div class="pure-u-1-1">
         <h1> Country_GDP Visualisations</h1>
-        <p>This dataset has all the countries listed with their continents, GDP, population and GDP_per_capita.</p>
+        <p>This dataset could be useful for various analyses, including exploring the relationships between these economic indicators, examining regional trends, or investigating the impact of population on GDP and GDP per capita.</p>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -37,6 +42,7 @@
     <div class="pure-g">
       <div class="pure-u-1-2">
         <div class="description description-left">
+          <h2> World Map </h2>
           <p> This Vega-Lite specification creates an interactive geographic visualization that combines geographical shapes of countries with data on GDP per capita. 
             It allows users to explore GDP per capita values for different countries by interacting with tooltips and the choropleth map. 
             The gray fill represents countries with no available data.</p>
@@ -50,11 +56,31 @@
 
     <!-- pure grid group -->
     <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2> IMF_GDP v.s. UN_GDP </h2>
+          <p> Both visualizations show how the total GDP (IMF and UN) is distributed across different continents. 
+            The first visualization focuses on the total IMF GDP, while the second visualization focuses on the total UN GDP. </p>
+        </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="vis3" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="vis4" class="vis-container"</div>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
       <div class="pure-u-2-3">
         <div id="vis2" class="vis-container"></div>
       </div>
       <div class="pure-u-1-3">
         <div class="description description-right">
+          <h2> GDP and Population </h2>
           <p> This visualization provides valuable insights into the relationship between GDP per capita and population while also highlighting specific countries of interest. </p>
         </div>
       </div>
@@ -65,17 +91,27 @@
 
   </div> <!-- end page -->
 
-</div> <!-- end page -->
+</div> end page
 
 <script type="text/javascript">
   var spec1 = "js/country_gdp.vg.json";
   var spec2 = "js/scatter_plot_interactive.vg.json";
+  var spec3 = "js/IMF_GDP.vg.json";
+  var spec4 = "js/UN_GDP.vg.json";
 
   vegaEmbed('#vis1', spec1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
   vegaEmbed('#vis2', spec2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', spec3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis4', spec4, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 </script>
