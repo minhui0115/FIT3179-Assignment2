@@ -103,8 +103,8 @@
                 "tooltip": [
                     {"field": "Country", "type": "nominal"},
                     {"field": "GDP_per_capita", "type": "quantitative", "format": ",.2f"},
-                    {"field": "IMF_GDP", "type": "quantitative", "format": ".2e"},
-                    {"field": "UN_GDP", "type": "quantitative", "format": ".2e" },
+                    {"field": "IMF_GDP", "type": "quantitative", "format": ".2f"},
+                    {"field": "UN_GDP", "type": "quantitative", "format": ".2f" },
                     {"field": "Population", "type": "quantitative", "format": ",.2f"}
                 ]
             }
@@ -131,8 +131,8 @@
                 "tooltip": [
                     {"field": "Country", "type": "nominal"},
                     {"field": "GDP_per_capita", "type": "quantitative", "format": ",.2f"},
-                    {"field": "IMF_GDP", "type": "quantitative", "format": ".2e"},
-                    {"field": "UN_GDP", "type": "quantitative", "format": ".2e" },
+                    {"field": "IMF_GDP", "type": "quantitative", "format": ".2f"},
+                    {"field": "UN_GDP", "type": "quantitative", "format": ".2f" },
                     {"field": "Population", "type": "quantitative", "format": ",.2f"}
                 ]
             }

@@ -59,8 +59,8 @@
             {"field": "properties.NAME", "type": "nominal", "title": "Country"},
               {"field": "GDP_per_capita", "type": "quantitative", "title": "GDP per Capita"},
               {"field" : "Population" , "type" : "quantitative" , "format" : ".2f", "title": "Population" },
-              {"field" : "IMF_GDP" , "type" : "quantitative" , "format" : ".2e", "title": "IMF GDP" },
-              {"field" : "UN_GDP" , "type" : "quantitative" , "format" : ".2e", "title": "UN GDP" }
+              {"field" : "IMF_GDP" , "type" : "quantitative" , "format" : ".2f", "title": "IMF GDP" },
+              {"field" : "UN_GDP" , "type" : "quantitative" , "format" : ".2f", "title": "UN GDP" }
         ]
       }
     }
