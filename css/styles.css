@@ -4,15 +4,19 @@ body *{
 
 h1 {
   font-weight: 900;
+  font-size: 36px;
+  background-color: #ffdfe9;
+  margin-top: 0px;
+  text-align: center;
 }
 
 body {
-  background-color: lightgray;
+  background-color:  rgb(241, 252, 255);
 }
 
 .page {
-  width: 850px;
-  background-color: rgb(249, 253, 255);
+  width: 1000px;
+  background-color: rgb(255, 255, 255);
   margin: auto;
   padding: 50px;
   padding-top: 35px;
@@ -22,18 +26,20 @@ body {
   width: 100%;
 }
 
-.description h2, h1 {
+.description h2 {
   background-color: #ffdfe9;
+  font-size: 25px;
   margin-top: 0px;
   text-align: center;
 }
 
-.description-right {
-  padding-left: 10px;
+.description p {
+  font-size: 16px; 
+  line-height: 1.5; 
 }
 
-.description-left {
-  padding-right: 10px;
+.text-container {
+  line-height: 1.5; 
 }
 
 .pure-g {
@@ -42,4 +48,28 @@ body {
 
 .small-font {
   font-size: 14px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+strong1 {
+  font-weight: bold;
+  color: blue;
+}
+
+strong2 {
+  font-weight: bold;
+  color: red;
+}
+
+strong3 {
+  font-weight: bold;
+  color:violet;
+}
+
+strong4 {
+  font-weight: bold;
+  color:blueviolet;
 }
