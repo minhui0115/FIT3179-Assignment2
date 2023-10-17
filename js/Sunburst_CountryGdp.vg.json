@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Sunburst Chart by Continent",
+    "width": "container",
+    "height": 350,
+    "data": {
+      "url": "https://raw.githubusercontent.com/minhui0115/FIT3179-Assignment2/main/data/Country_GDP.csv"
+    },
+    "transform": [
+      {
+        "joinaggregate": [
+          {
+            "op": "sum",
+            "field": "IMF_GDP",
+            "as": "IMF_GDP"
+          },
+          {
+            "op": "sum",
+            "field": "UN_GDP",
+            "as": "UN_GDP"
+          }
+        ],
+        "groupby": ["Continent"]
+      },
+      {
+        "window": [
+          {
+            "op": "rank",
+            "as": "rank"
+          }
+        ],
+        "sort": [{ "field": "IMF_GDP", "order": "descending" }]
+      }
+    ],
+    "mark": "arc",
+    "encoding": {
+      "color": {"field": "Continent", "type": "nominal"},
+      "tooltip": [
+        { "field": "Continent", "title": "Continent" },
+        { "field": "IMF_GDP", "title": "Total IMF GDP", "format": ".2f" },
+        { "field": "UN_GDP", "title": "Total UN GDP", "format": ".2f" }
+      ],
+      "order": { "field": "rank" },
+      "theta": { "field": "IMF_GDP", "type": "quantitative" },
+      "radius": { "field": "rank", "type": "ordinal", "scale": { "type": "sqrt", "zero": false, "rangeMin": 20, "rangeMax": 100 } }
+    }
+  }
+  
